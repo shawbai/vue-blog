@@ -1,27 +1,45 @@
 import login from '@/components/login';
 import home from '@/components/home';
-import article from '@/components/home/article';
+import articles from '@/components/home/articles';
+import articleDetails from '@/components/home/articleDetails';
+import about from '@/components/home/about';
+import latestArticles from '@/components/home/latestArticles';
 
 const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: home
-  },
   {
     path: '/login',
     name: 'login',
     component: login
   },
   {
-    path: '/home',
+    path: '/',
     name: 'home',
     component: home,
     children: [
       {
-        path: 'article',
-        name: 'article',
-        component: article
+        path: 'articles',
+        name: 'articles',
+        component: articles
+      },
+      {
+        path: 'articleDetails',
+        name: 'articleDetails',
+        component: articleDetails
+      },
+      {
+        path: 'about',
+        name: 'about',
+        component: about
+      },
+      {
+        path: 'latestArticles',
+        name: 'latestArticles',
+        component: latestArticles
+      },
+      {
+        path: '/',
+        name: 'latestArticles',
+        component: latestArticles
       }
     ]
   }
