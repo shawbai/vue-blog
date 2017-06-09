@@ -1,13 +1,14 @@
 import Vue from 'vue';
 import App from './App';
 import VueRouter from 'vue-router';
-import VueResource from 'vue-resource';
+import Axios from 'axios';
 import routes from './routes';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-default/index.css';
 Vue.use(ElementUI);
 Vue.use(VueRouter);
-Vue.use(VueResource);
+Axios.defaults.baseURL = '/api';
+Vue.prototype.$http = Axios;
 
 // 路由跳转
 Vue.prototype.$goRoute = function (index) {
@@ -15,6 +16,7 @@ Vue.prototype.$goRoute = function (index) {
 };
 
 const router = new VueRouter({
+  // mode: 'history',
   routes
 });
 

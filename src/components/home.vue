@@ -16,11 +16,12 @@
   </div>
 </template>
 
-<script>
+<script scoped>
 import navbar from '@/components/navbar/navbar';
 export default {
   name: 'navbar',
   data () {
+    return {};
   },
   components: {
     'v-navbar': navbar
@@ -44,12 +45,15 @@ ol {
     list-style-type: none;
 }
 #home {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    font-family: 'Hiragino Sans GB', "Microsoft Yahei", "微软雅黑", sans-serif;
     width: 100%;
     height: 100%;
     overflow: hidden;
+    background-color: #f4f4f4;
 }
 .v-body{
-  height: 81vh;
+  height: 100vh;
+  overflow-y: scroll;
 }
+
 </style>

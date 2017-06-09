@@ -73,12 +73,12 @@
     <div class="pc-nav" v-show="isShowMobileNav">
         <ul>
             <li @click="$goRoute('/')" v-bind:class="{borderRightActive: $route.path=='/'}">最新文章</li>
-            <li @click="$goRoute('/articles')" v-bind:class="{borderRightActive: $route.path=='/articles'}">文章归档</li>
+            <li @click="$goRoute('/articles')" v-bind:class="{borderRightActive: $route.path=='/articles'}">我的文章</li>
             <li @click="$goRoute('/about')" v-bind:class="{borderRightActive: $route.path=='/about'}">关于我的</li>
         </ul>
     </div>
     <div class="nav-footer">
-        <span>粤ICP备17022497号</span>
+        <span>苏ICP备17011566号-1</span>
     </div>
 </div>
 
