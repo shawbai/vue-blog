@@ -4,6 +4,7 @@ import articles from '@/components/home/articles';
 import articleDetails from '@/components/home/articleDetails';
 import about from '@/components/home/about';
 import latestArticles from '@/components/home/latestArticles';
+import NotFoundComponent from '@/components/NotFoundComponent';
 
 const routes = [
   {
@@ -42,6 +43,10 @@ const routes = [
         component: latestArticles
       }
     ]
+  },
+  {
+    path: '*',
+    component: NotFoundComponent
   }
 ];
 export default routes;

@@ -3,9 +3,23 @@ import App from './App';
 import VueRouter from 'vue-router';
 import Axios from 'axios';
 import routes from './routes';
-import ElementUI from 'element-ui';
+// import ElementUI from 'element-ui';
+import {
+  Card,
+  TabPane,
+  Row,
+  Col,
+  Tabs,
+  Button } from 'element-ui';
 import 'element-ui/lib/theme-default/index.css';
-Vue.use(ElementUI);
+// Vue.use(ElementUI);
+Vue.use(Card);
+Vue.use(TabPane);
+Vue.use(Row);
+Vue.use(Col);
+Vue.use(Tabs);
+Vue.use(Button);
+
 Vue.use(VueRouter);
 Axios.defaults.baseURL = '/api';
 Vue.prototype.$http = Axios;
@@ -16,7 +30,7 @@ Vue.prototype.$goRoute = function (index) {
 };
 
 const router = new VueRouter({
-  // mode: 'history',
+  mode: 'history',
   routes
 });
 
