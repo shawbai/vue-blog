@@ -58,7 +58,7 @@ export default {
     },
     methods: {
         articlesDetailsFn: function(id) {
-            this.$goRoute('/articleDetails' + id);
+            this.$goRoute('/articleDetails/' + id);
         },
         articlesMore: function() {
             this.pageNum = this.pageNum + 1;
@@ -68,7 +68,7 @@ export default {
           var _this = this;
           _this.$http({
                   method: 'get',
-                  url: '/myblog/v1/articles/page',
+                  url: '/v1/articles/page',
                   params: {
                       'page': _this.pageNum,
                       'rows': 4

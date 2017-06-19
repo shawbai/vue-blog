@@ -86,7 +86,7 @@ export default {
             var _this = this;
             this.$http({
                     method: 'get',
-                    url: '/myblog/v1/article/' + articleId
+                    url: '/v1/articles/' + articleId
                 })
                 .then(function(response) {
                     // console.log('!!!!:' + JSON.stringify(response.data));

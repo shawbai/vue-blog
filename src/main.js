@@ -21,7 +21,7 @@ Vue.use(Tabs);
 Vue.use(Button);
 
 Vue.use(VueRouter);
-Axios.defaults.baseURL = '/api';
+Axios.defaults.baseURL = 'http://localhost:9999/myblog';
 Vue.prototype.$http = Axios;
 
 // 路由跳转
